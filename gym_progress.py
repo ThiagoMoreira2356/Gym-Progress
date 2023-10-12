@@ -73,6 +73,45 @@ botao_progressao = customtkinter.CTkButton(janela,text='Progressão de carga', c
 botao_progressao.grid(column=0,row=1)
 # Fim da Janela progressão
 
+#Calculadora de IMC
+def abre_janela_calculadora():
+    janela_calculadora = customtkinter.CTk()
+    janela_calculadora.geometry('500x300')
+    janela_calculadora.title('Calculadora de IMC')
+    texto_calculadoraimc = customtkinter.CTkLabel(master=janela_calculadora, text='Calculadora de IMC')
+    texto_calculadoraimc.grid(column=0,row= 0)
+
+    imc_idade_texto = customtkinter.CTkLabel(master=janela_calculadora, text='Idade:')
+    imc_idade_texto.grid(column= 0, row=1)
+    imc_idade = customtkinter.CTkEntry(master=janela_calculadora)
+    imc_idade.grid(column=1, row=1)
+
+    imc_peso_texto = customtkinter.CTkLabel(master=janela_calculadora, text='Peso:')
+    imc_peso_texto.grid(column= 0, row=2)
+    imc_peso = customtkinter.CTkEntry(master=janela_calculadora, placeholder_text='KG')
+    imc_peso.grid(column=1, row=2)
+    
+    imc_altura_texto = customtkinter.CTkLabel(master=janela_calculadora, text='Altura:')
+    imc_altura_texto.grid(column= 0, row=3)
+    imc_altura = customtkinter.CTkEntry(master=janela_calculadora, placeholder_text='M')
+    imc_altura.grid(column=1, row=3)
+
+    imc_genero_texto = customtkinter.CTkLabel(master=janela_calculadora, text='Gênero:')
+    imc_genero_texto.grid(column= 0, row= 4)
+    imc_genero = customtkinter.CTkCheckBox(master=janela_calculadora, text='Homem')
+    imc_genero.grid(column = 1, row=4)
+
+    imc_botao_calcular = customtkinter.CTkButton(master=janela_calculadora, text='Calcular IMC', command=print('Função em desenvolvimento'))
+    imc_botao_calcular.grid(column=1, row=5)
+    
+
+
+    janela_calculadora.mainloop()
+
+
+botao_calculadora = customtkinter.CTkButton(master=janela, text='Calculadora de IMC', command=abre_janela_calculadora)
+botao_calculadora.grid(column=1, row=1)
+
 
 
 
