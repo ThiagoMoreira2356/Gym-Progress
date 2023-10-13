@@ -10,29 +10,6 @@ customtkinter.set_appearance_mode('dark')
 customtkinter.set_default_color_theme('dark-blue')
 
 
-"""  INICIO DO LOGIN
-#logins
-usuario_cadastrado = 'admin' 
-senha_cadastrada = 'admin'
-usuario = input('Usuário:')
-senha = input('Senha:')
-
-
-#Login
-if usuario == usuario_cadastrado and senha == senha_cadastrada:
-    print('Login efetuado com sucessso')
-else:
-    print('Usuário e senha inválidos')
-
-
-#Menu
-print('Bem vindo ao gym progress!')
-print('[1]Progressão de carga')
-menu_inicial = int(input('Digite uma opção:'))
-
-FINAL DO LOGIN  """
-
-
 #Janela inicial
 janela = customtkinter.CTk()
 janela.geometry("500x300")
@@ -73,6 +50,7 @@ botao_progressao = customtkinter.CTkButton(janela,text='Progressão de carga', c
 botao_progressao.grid(column=0,row=1)
 # Fim da Janela progressão
 
+
 #Calculadora de IMC
 def abre_janela_calculadora():
     janela_calculadora = customtkinter.CTk()
@@ -98,8 +76,9 @@ def abre_janela_calculadora():
 
     imc_genero_texto = customtkinter.CTkLabel(master=janela_calculadora, text='Gênero:')
     imc_genero_texto.grid(column= 0, row= 4)
-    imc_genero = customtkinter.CTkCheckBox(master=janela_calculadora, text='Homem')
-    imc_genero.grid(column = 1, row=4)
+    imc_genero = customtkinter.CTkOptionMenu(master=janela_calculadora,values=['Homem', 'Mulher'])
+    imc_genero.grid(column= 1, row=4)
+    
 
     imc_botao_calcular = customtkinter.CTkButton(master=janela_calculadora, text='Calcular IMC', command=print('Função em desenvolvimento'))
     imc_botao_calcular.grid(column=1, row=5)
