@@ -78,9 +78,15 @@ def abre_janela_calculadora():
     imc_genero_texto.grid(column= 0, row= 4)
     imc_genero = customtkinter.CTkOptionMenu(master=janela_calculadora,values=['Homem', 'Mulher'])
     imc_genero.grid(column= 1, row=4)
-    
 
-    imc_botao_calcular = customtkinter.CTkButton(master=janela_calculadora, text='Calcular IMC', command=print('Função em desenvolvimento'))
+    def calcula_imc():
+        peso = float(imc_peso.get())
+        altura = float(imc_altura.get())
+        valor_imc = float(peso / (altura*altura))
+        valor_imc_formatado = f"{valor_imc:.2f}"
+        print(valor_imc_formatado)
+
+    imc_botao_calcular = customtkinter.CTkButton(master=janela_calculadora, text='Calcular IMC', command=calcula_imc)
     imc_botao_calcular.grid(column=1, row=5)
     
 
