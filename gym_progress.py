@@ -83,12 +83,13 @@ def abre_janela_calculadora():
         peso = float(imc_peso.get())
         altura = float(imc_altura.get())
         valor_imc = float(peso / (altura*altura))
-        valor_imc_formatado = f"{valor_imc:.2f}"
-        print(valor_imc_formatado)
+        #valor_imc_formatado = f"{valor_imc:.2f}"
+        valor_imc_formatado_texto.configure (text=f'Seu IMC é: {valor_imc:.2f}')
 
     imc_botao_calcular = customtkinter.CTkButton(master=janela_calculadora, text='Calcular IMC', command=calcula_imc)
     imc_botao_calcular.grid(column=1, row=5)
-    
+    valor_imc_formatado_texto = customtkinter.CTkLabel(master=janela_calculadora, text='')
+    valor_imc_formatado_texto.grid(column=1, row=6)
 
 
     janela_calculadora.mainloop()
