@@ -15,7 +15,7 @@ janela = customtkinter.CTk()
 janela.geometry("500x300")
 janela.title('Gym Progress')
 
-texto_oritenção = customtkinter.CTkLabel(master=janela, text='Menu Principal')
+texto_oritenção = customtkinter.CTkLabel(master=janela, text='Menu Principal', font= ('Helvetica',18))
 texto_oritenção.grid(column=0,row=0)
 
 
@@ -46,8 +46,9 @@ def abre_janela_progressao():
     carga_sugerida_texto.grid(column=0, row=3)
     janela_progressao.mainloop()
 
+#Botão progressão de carga da tela inicial
 botao_progressao = customtkinter.CTkButton(janela,text='Progressão de carga', command=abre_janela_progressao)
-botao_progressao.grid(column=0,row=1)
+botao_progressao.grid(column=0,row=1, padx = 5)
 # Fim da Janela progressão
 
 
@@ -84,10 +85,22 @@ def abre_janela_calculadora():
         altura = float(imc_altura.get())
         valor_imc = float(peso / (altura*altura))
         valor_imc_formatado_texto.configure (text=f'Seu IMC é: {valor_imc:.2f}')
-        #Inicio da lógica do resultado de IMC com base na tabela.
-        def resultado_imc():
-            if valor_imc < 18.5:
-                print('Você está abaixo do peso')
+
+        #Tabela de referência para comparação do IMC e informar o estado atual em relação ao peso do usuário
+
+        #Tabela usuário Homem abaixo dos 65 anos 
+        if round(valor_imc, 2) < 18.5:
+            resultado_imc_texto.configure(text = 'Você está abaixo do Peso')
+        elif round(valor_imc,2) > 18.6 and round(valor_imc,2) < 24.9:
+            resultado_imc_texto.configure(text = 'Você está no Peso ideal!')
+        elif round(valor_imc,2) > 25.0 and round(valor_imc,2) < 29.9:
+            resultado_imc_texto.configure(text = 'Você está levemente acima do peso')
+        elif round(valor_imc,2) > 30.0 and round(valor_imc,2) < 34.9:
+            resultado_imc_texto.configure(text = 'Você está com Obesidade grau I')
+        elif round(valor_imc,2) > 35.0 and round(valor_imc,2) < 39.9:
+            resultado_imc_texto.configure(text = 'Você está com Obesidade grau II (severa)!')
+        else:
+            resultado_imc_texto.configure(text = 'Você está com Obesidade grau III (mórbida)!')
 
     
 
@@ -96,13 +109,15 @@ def abre_janela_calculadora():
     imc_botao_calcular.grid(column=1, row=5)
     valor_imc_formatado_texto = customtkinter.CTkLabel(master=janela_calculadora, text='')
     valor_imc_formatado_texto.grid(column=1, row=6)
-
+    resultado_imc_texto = customtkinter.CTkLabel(master=janela_calculadora, text='')
+    resultado_imc_texto.grid(column= 1, row = 7)
 
     janela_calculadora.mainloop()
 
 
-botao_calculadora = customtkinter.CTkButton(master=janela, text='Calculadora de IMC', command=abre_janela_calculadora)
-botao_calculadora.grid(column=1, row=1)
+#Botão calculadora imc da tela inicial
+botao_calculadora = customtkinter.CTkButton(master=janela, text='Calculadora de IMC', command=abre_janela_calculadora, border_spacing= 5)
+botao_calculadora.grid(column=2, row=1, padx = 5)
 
 
 
