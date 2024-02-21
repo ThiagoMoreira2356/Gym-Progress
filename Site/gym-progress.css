@@ -9,7 +9,8 @@
 .header-menu {
     display: flex;
     align-items: center;
-    margin: 40px;
+    justify-content: space-around;
+    margin: 20px;
 }
 
 .header-menu-lista {
@@ -45,7 +46,7 @@
 .main-widgets {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .main-widgets section {
