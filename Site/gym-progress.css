@@ -1,0 +1,70 @@
+* {font-family: 'Inter', sans-serif;}
+
+/* Header */
+
+.header-logo {
+    display: inline;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    margin: 40px;
+}
+
+.header-menu-lista {
+    display: flex;
+}
+
+.header-menu-lista li {
+    padding: 15px;
+}
+
+.header-menu-lista a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-login-lista a {
+    text-decoration: none;
+}
+
+.header-login-lista {
+    display: flex;
+}
+
+.header-login-lista li {
+    padding: 5px;
+    
+}
+
+
+
+/* Main */
+
+.main-widgets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-widgets section {
+    padding: 20px;
+}
+
+.main-widget-titulo {
+    color:#0001DB;
+}
+
+
+
+/* Footer */
+
+.footer-conteudo {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px ;
+}
+
+
+
