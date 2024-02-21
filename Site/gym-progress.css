@@ -1,5 +1,10 @@
 * {font-family: 'Inter', sans-serif;}
 
+body {
+    background-color: #fffef3;
+}
+
+
 /* Header */
 
 .header-logo {
@@ -12,6 +17,8 @@
     justify-content: space-around;
     margin: 20px;
 }
+
+
 
 .header-menu-lista {
     display: flex;
@@ -55,6 +62,16 @@
 
 .main-widget-titulo {
     color:#0001DB;
+}
+
+.main-widget-imc {
+    border: 2px solid black;
+    background-color: #D9D9D9;
+}
+
+.main-widget-treino {
+    border: 2px solid black;
+    background-color: #D9D9D9;
 }
 
 
