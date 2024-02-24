@@ -7,10 +7,11 @@
 }
 
 .progressaocarga-janela {
+    width: 75%;
     background-color: #D9D9D9;
     display: flex;
     flex-direction: column;
-
+    padding-right: 20px;
 }
 
 .progressaocarga-janela-dados {
@@ -18,3 +19,18 @@
     flex-direction: column;
     max-width: 30%;
 }
+
+
+.progressaocarga-janela-exercicios {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.progressaocarga-janela-carga {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
