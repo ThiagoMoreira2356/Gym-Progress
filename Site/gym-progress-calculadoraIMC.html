@@ -17,7 +17,7 @@
     <header>
         
         <nav class="header-menu">
-            <img src="" alt="Gym Progress logo" class="header-logo">
+            <img src="/images/gym-progress-logo-blue.png" alt="Gym Progress logo" class="header-logo">
             <ul class="header-menu-lista">
                 <li><a href="gym-progress.html">Início</a></li>
                 <li><a href="gym-progress-progressao.html">Progressão de carga</a></li>
@@ -35,15 +35,65 @@
     </header>
 
     <main>
-        
-
+        <h1 class="calculoimc-titulo">Cálculo de IMC</h1>
+        <div class="conteudo-principal">
+            <section class="calculoimc">
+                <div class="calculoimc-conteudo">
+                    <label for="calculoimc-altura">Altura</label>
+                    <input type="number" id="calculoimc-altura" placeholder="CM">
+                    <label for="calculoimc-peso">Peso</label>
+                    <input type="number" id="calculoimc-peso" placeholder="KG">
+                    <button class="calculoimc-calcular">Calcular</button>
+                    <button class="calculoimc-limpar">Limpar</button>
+                </div>
+            
+                <div class="calculoimc-resultado" id="calculoimc-resultado">
+                    <h2>Seu IMC:</h2>
+                 </div>
+            </section>
+            <section class="tabelaimc">
+                <h2 class="tabelaimc-titulo">Tabela IMC</h2>
+                <table class="tabelaimc-conteudo">
+                    <tr>
+                        <th>IMC</th>
+                        <th>Classificação</th>
+                        <th>Obesidade (Grau)</th>
+                    </tr>
+                    <tr>
+                        <td>MENOR QUE 18,5</td>
+                        <td>MAGREZA</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>ENTRE 18,5 E 24,9</td>
+                        <td>NORMAL</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>ENTRE 25,0 E 29,9</td>
+                        <td>SOBREPESO</td>
+                        <td>I</td>
+                    </tr>
+                    <tr>
+                        <td>ENTRE 30,0 E 39,9</td>
+                        <td>OBESIDADE</td>
+                        <td>II</td>
+                    </tr>
+                    <tr>
+                        <td>MAIOR QUE 40,0</td>
+                        <td>OBESIDADE GRAVE</td>
+                        <td>III</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
 
     </main>
 
     <footer>
 
         <div class="footer-conteudo">
-            <img src="" alt="Gym Progress logo">
+            <img src="/images/gym-progress-logo-blue.png" alt="Gym Progress logo">
             <div class="footer-social-links">
                 <ul>
                     <li><a href="https://www.linkedin.com/in/thiago-moreira-a7b604198/">Linkedin</a></li>
