@@ -40,15 +40,15 @@
             <section class="calculoimc">
                 <div class="calculoimc-conteudo">
                     <label for="calculoimc-altura">Altura</label>
-                    <input type="number" id="calculoimc-altura" placeholder="CM">
+                    <input type="text" id="calculoimc-altura" placeholder="M">
                     <label for="calculoimc-peso">Peso</label>
-                    <input type="number" id="calculoimc-peso" placeholder="KG">
-                    <button class="calculoimc-calcular">Calcular</button>
-                    <button class="calculoimc-limpar">Limpar</button>
+                    <input type="text" id="calculoimc-peso" placeholder="KG">
+                    <button class="calculoimc-calcular" onclick="calcularIMC()">Calcular</button>
+                    <button class="calculoimc-limpar" onclick="limparCampos()">Limpar</button>
                 </div>
-            
+
                 <div class="calculoimc-resultado" id="calculoimc-resultado">
-                    <h2>Seu IMC:</h2>
+                    <h2 id="calculoimc-resultado-valor">Seu IMC:</h2>
                  </div>
             </section>
             <section class="tabelaimc">
@@ -103,6 +103,6 @@
         </div>
     </footer>
 
-    
+    <script src="gym-progress-calculadoraIMC.js"></script>
 </body>
 </html>
